@@ -12,8 +12,25 @@ class Car{
      }
 
      public function printDataCar(){
-          echo "License: $this->license, Conductor:{$this->driver->name},document: {$this->driver->document}";
+          echo "Licencia: $this->license 
+        Driver: {$this->driver->name} 
+        Número de pasajeros: $this->passenger";
      }
+
+     public function getPassenger() {
+          return $this->passenger;
+     }
+
+     public function setPassenger($passenger) {
+        
+     if ($passenger == 4) {
+          $this->passenger = $passenger;
+     }
+     else {
+          echo "Necesitas asignar 4 pasajeros";
+    }
+
+}
 }
 
 ?>
